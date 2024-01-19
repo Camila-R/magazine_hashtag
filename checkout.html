@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body class="bg-slate-300 h-screen">
+    <header class="header shadow-xl shadow-slate-400">
+        <a href="/"><img class="h-24" src="./assets/logo.png" alt="logo da Game Shop"></a>
+    </header>
+    <form class="formulario">
+        <section id="dados-usuario" class="bg-slate-100 rounded-xl py-5 grow">
+            <p class="tituloForms">Dados do Usuário</p>
+            <div class="nomeUsuario">
+                <label for="nome" class="nome">Nome</label>
+                <input type="text" id="nome" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Ex.: João da Silva" required>   
+            </div>
+            <div class="emailUsuario">
+                <label for="email" class="email">E-mail</label>
+                <input type="text" id="email" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Ex.: joao.silva@gmail.com" required>   
+            </div>
+            <div class="telefoneUsuario">
+                <label for="telefone" class="telefone">Telefone</label>
+                <input type="text" id="telefone" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Ex.: (11) 9 9999-9999" required>   
+            </div>
+        </section>
+        <section id="pagamento-entrega" class="bg-slate-100 rounded-xl py-5 grow">
+            <p class="tituloForms">Pagamento e Entrega</p>
+            <p class="tituloCampos">Dados de Pagamento</p>
+            <div class="pagamento">
+                <label for="numeroCartao" class="numeroCartao">Número do Cartão</label>
+                <input type="text" id="numeroCartao" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="0101 0000 1111 1010" required>   
+            </div>
+            <div class="flex">
+                <div class="w-1/2 dadosCartao">
+                    <label for="cvv" class="font-bold">CVV</label>
+                    <input type="text" id="cvv" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="111" required>   
+                </div>
+                <div class="w-1/2 dadosCartao">
+                    <label for="validade" class="font-bold">Data de validade</label>
+                    <input type="text" id="validade" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="01/24" required>   
+                </div> 
+            </div>
+            <p class="tituloCampos">Dados de Entrega</p>
+            <div class="endereco">
+                <label for="cep" class="font-bold">CEP</label>
+                <input
+                  type="text"
+                  id="cep"
+                  class="rounded-sm px-2 border-2 border-slate-200 py-1"
+                  placeholder="11122-333"
+                  required
+                />
+              </div>
+            <div class="endereco">
+                <label for="endereco" class="font-bold">Endereço</label>
+                <input
+                  type="text"
+                  id="endereco"
+                  class="rounded-sm px-2 border-2 border-slate-200 py-1"
+                  placeholder="Rua que sobe e desce"
+                  required
+                />
+              </div>
+              <div class="flex">
+                <div class="w-1/2 dado-endereco">
+                  <label for="numero" class="font-bold">Número</label>
+                  <input
+                    type="text"
+                    id="numero"
+                    class="rounded-sm px-2 border-2 border-slate-200 py-1"
+                    placeholder="444"
+                    required
+                  />
+                </div>
+                <div class="w-1/2 dado-endereco">
+                  <label for="complemento" class="font-bold"
+                    >Complemento</label
+                  >
+                  <input
+                    type="text"
+                    id="complemento"
+                    class="rounded-sm px-2 border-2 border-slate-200 py-1"
+                    placeholder="555"
+                    required
+                  />
+                </div>
+              </div>
+        </section>
+        <section id="produtos-checkout" class="bg-slate-100 rounded-xl py-5 grow">
+            <section id="container-produtos-checkout" class="h-4/5 overflow-y-auto px-2"></section>
+            <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around">
+                <p id="preco-total">TOTAL: R$ 0</p>
+                <button id="finalizar-compra-checkout" class="bg-slate-200 text-slate-900 botao-finalizar" type="submit">Finalizar Compra</button>
+            </section>
+        </section>
+    </form>
+    <script src="./checkout.js" type="module"></script>
+</body>
+</html>

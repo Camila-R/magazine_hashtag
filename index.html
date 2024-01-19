@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <section id="carrinho" class="fixed top-0 right-[-360px] bg-slate-500 h-screen w-[360px] text-slate-200 ">
+        <div id="cabecalho-carrinho" class="flex justify-between m-4">
+            <p>Meu carrinho</p>
+            <button id="fechar-carrinho"><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
+        <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2"></article>
+        </section>
+        <p id="preco-total">TOTAL: R$ 0</p>
+        <button class="bg-slate-200 text-slate-900 botao-finalizar"
+                id="finalizar-compra">Finalizar Compra</button>
+    </section>
+    <header class="header shadow-xl shadow-slate-400">
+        <a href="/"><img class="h-32" src="./assets/logo.png" alt="logo da Game Shop"></a>
+        <div class="botao-header">
+            <a href="./pedidos.html"><button><i class="fa-solid fa-user-ninja"></i> Pedidos</button></a>
+            <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho</button> 
+        </div>
+    </header>
+    <main class="flex flex-col items-center bg-slate-300">
+        <section id="filtros" class="p-10 flex">
+            <div class="px-4">
+                <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked>
+                <label for="exibir-todos" class="p-3 rounded-xl select-none cursor-pointer peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold">Todos</label>
+            </div>
+            <div class="px-4">
+                <input id="exibir-memoria1tera" type="radio" name="filtro" class="peer hidden">
+                <label for="exibir-memoria1tera" class="p-3 rounded-xl select-none cursor-pointer peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold">Memória 1 TeraByte</label>
+            </div>
+            <div class="px-4">
+                <input id="exibir-semMemoria" type="radio" name="filtro" class="peer hidden">
+                <label for="exibir-semMemoria" class="p-3 rounded-xl select-none cursor-pointer peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold">Sem Memória Interna</label>
+            </div>
+        </section>
+        <section class="flex flex-wrap p-10 justify-center gap-10" id="container-produto"></section>
+    </main>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    padding: 4px;
+    position: sticky;
+    z-index: 5;
+    background-color: #fff;
+}
+.botao-header{
+    gap: 20px;
+    display: flex;
+    margin-right: 30px;
+}
+
+#carrinho{
+    transition: 0.5s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 50;
+}
+
+.card-produto{
+    display: flex;
+    border: 1px solid rgb(204, 204, 225);
+    border-radius: 4px;
+    color: rgb(8, 30, 43);
+    background-color: aliceblue;
+    position: relative;
+}
+
+.card-produto div{
+    padding: 5px 15px;
+}
+
+.card-produto #fechar-carrinho{
+    position: absolute;
+    top: 2px;
+    right: 6px;
+}
+
+.name-product{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.price{
+    padding-top: 5px;
+}
+
+.botao-adicionar{
+    background-color: aliceblue;
+    width: 100%;
+    padding: 10px 0;
+}
+.botao-adicionar:hover{
+    background-color: rgb(232, 236, 240);
+}
+.botao-finalizar:hover{
+    background-color: rgba(148, 158, 163, 0.626);
+    color: #fff;
+}
+
+.botao-finalizar{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.nome-produto{
+    padding: 10px;
+}
+
+.dados-produto{
+    padding: 5px;
+}
+
+.price-card{
+    font-weight: 600;
+}
+
+#preco-total{
+    background-color: #fff;
+    padding: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: black;
+}
+
+/* Page Checkout */
+.formulario{
+    width: 100%;
+    padding: 15px;
+    gap: 4px;
+    display: flex;
+    height: 100%;
+}
+
+
+#dados-usuario,
+#pagamento-entrega,
+#produtos-checkout{
+    width: 30%;
+}
+
+.nomeUsuario,
+.emailUsuario,
+.telefoneUsuario,
+.pagamento,
+.dadosCartao,
+.endereco,
+.dado-endereco{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.nomeUsuario .nome,
+.emailUsuario .email,
+.telefoneUsuario .telefone,
+.pagamento .numeroCartao{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tituloCampos{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.tituloForms{
+    margin: 5px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
